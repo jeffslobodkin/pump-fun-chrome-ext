@@ -18,7 +18,7 @@ export default async function deployTx(keypair: Keypair, name: string, symbol: s
     const connection = new Connection(config.rpcEndpoint);
     let instructions: TransactionInstruction[] = [];
 
-
+    //TODO: Add a LUT
     //Pumpfun Create Instruction
     const mint = new Keypair();
     const bondingCurve = deriveBondingCurvePda(mint.publicKey);
